@@ -1,9 +1,9 @@
-import { Calendar, MessageCircle, HelpCircle, BookOpen, LayoutDashboard } from "lucide-react";
+import { Calendar, MessageCircle, HelpCircle, BookOpen, LayoutDashboard, Users } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { icon: LayoutDashboard, label: "Dashboard", path: "/" },
+  { icon: LayoutDashboard, label: "Home", path: "/" },
   { icon: Calendar, label: "Tracker", path: "/tracker" },
   { icon: HelpCircle, label: "Q&A", path: "/qna" },
   { icon: MessageCircle, label: "Chat", path: "/chat" },

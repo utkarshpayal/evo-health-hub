@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 
 const faqs = [
   {
-    category: "Period Basics",
+    category: "Period Basics (Girls)",
     questions: [
       {
         q: "What is a normal period length?",
@@ -15,6 +15,27 @@ const faqs = [
       {
         q: "How much bleeding is normal?",
         a: "On average, people lose about 2-3 tablespoons of blood during their period. You should change pads/tampons every 4-8 hours. If you're soaking through products every 1-2 hours, that's considered heavy bleeding and you should consult a doctor."
+      },
+      {
+        q: "How should I maintain menstrual hygiene?",
+        a: "Change pads every 4-6 hours, tampons every 4-8 hours. Always wash hands before and after. Use unscented products. Shower daily during periods and wash intimate area with plain water or mild soap. Dispose of products properly, never flush them."
+      }
+    ]
+  },
+  {
+    category: "Boys' Health",
+    questions: [
+      {
+        q: "What is nightfall (wet dreams) and is it normal?",
+        a: "Nightfall or nocturnal emissions are completely normal and healthy. They occur due to hormonal changes during puberty when your body releases built-up semen during sleep. It's not a sign of illness or weakness, and frequency varies from person to person. Good sleep hygiene can help regulate occurrences."
+      },
+      {
+        q: "Is masturbation harmful?",
+        a: "No, masturbation is a normal, healthy part of sexuality. It's a safe way to explore your body and doesn't cause physical harm, weakness, or health problems. Practice good hygiene before and after. If it interferes with daily life, consider talking to a counselor, but otherwise it's a healthy personal choice."
+      },
+      {
+        q: "How do I maintain proper hygiene?",
+        a: "Wash genital area daily with mild soap and water. Wear clean cotton underwear daily. If uncircumcised, gently pull back foreskin and clean. Shower after exercise. Trim pubic hair if desired but it's not medically necessary. See a doctor if you notice unusual discharge, odor, or pain."
       }
     ]
   },
@@ -32,15 +53,23 @@ const faqs = [
     ]
   },
   {
-    category: "Sexual Health",
+    category: "Sexual Health (All)",
     questions: [
       {
         q: "What are the different types of contraception?",
-        a: "Common methods include barrier methods (condoms), hormonal methods (pills, patches, IUDs), and natural family planning. Each has different effectiveness rates and side effects. Condoms are the only method that also protect against STIs."
+        a: "Common methods include barrier methods (condoms), hormonal methods (pills, patches, IUDs), emergency contraception, and natural family planning. Each has different effectiveness rates and side effects. Condoms are the only method that also protect against STIs. Consult healthcare provider to find what works best for you."
       },
       {
         q: "How can I protect myself from STIs?",
-        a: "Use barrier protection (condoms) consistently, get regular STI testing, limit sexual partners, and have open conversations about sexual health with partners. Get vaccinated for HPV if eligible."
+        a: "Use barrier protection (condoms) consistently, get regular STI testing, limit sexual partners, and have open conversations about sexual health with partners. Get vaccinated for HPV if eligible. Remember that many STIs show no symptoms, so testing is important even if you feel healthy."
+      },
+      {
+        q: "What is consent and why is it important?",
+        a: "Consent means freely agreeing to sexual activity without pressure, threats, or manipulation. Both people must clearly agree and can change their mind at any time. Consent is mandatory - you have the right to say no whenever you feel uncomfortable, and you must respect others' boundaries too."
+      },
+      {
+        q: "Is it normal to have sexual thoughts during puberty?",
+        a: "Yes, sexual thoughts and feelings are a completely normal part of development during puberty. Hormonal changes cause increased sexual awareness. These feelings are natural for both boys and girls. What matters is learning about healthy sexuality, boundaries, and respect."
       }
     ]
   },

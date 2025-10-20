@@ -8,6 +8,8 @@ import Tracker from "./pages/Tracker";
 import QnA from "./pages/QnA";
 import Chat from "./pages/Chat";
 import Learn from "./pages/Learn";
+import BoysHealth from "./pages/BoysHealth";
+import GirlsHealth from "./pages/GirlsHealth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/qna" element={<QnA />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/learn" element={<Learn />} />
+          <Route path="/boys-health" element={<BoysHealth />} />
+          <Route path="/girls-health" element={<GirlsHealth />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

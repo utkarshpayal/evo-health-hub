@@ -1,7 +1,10 @@
-import { BookOpen, Heart, Brain, Shield, Users, Sparkles } from "lucide-react";
+import { BookOpen, Heart, Brain, Shield, Users, Sparkles, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import wellnessImg from "@/assets/wellness.jpg";
 
 const topics = [
   {
@@ -75,10 +78,52 @@ export default function Learn() {
       <Navigation />
       
       <div className="container mx-auto px-4 pt-8 max-w-6xl">
+        <div className="mb-8 rounded-2xl overflow-hidden shadow-glow">
+          <img 
+            src={wellnessImg} 
+            alt="Wellness and health education"
+            className="w-full h-48 md:h-56 object-cover"
+          />
+        </div>
+
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Health Education</h1>
           <p className="text-muted-foreground">Evidence-based information to empower your health journey</p>
         </header>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <Link to="/girls-health">
+            <Card className="shadow-soft hover:shadow-glow transition-all cursor-pointer group h-full">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between text-xl">
+                  <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+                    Girls' Health Guide
+                  </span>
+                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                </CardTitle>
+                <CardDescription>
+                  Comprehensive guide covering periods, hygiene, sexual health, and common concerns
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
+
+          <Link to="/boys-health">
+            <Card className="shadow-soft hover:shadow-glow transition-all cursor-pointer group h-full">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between text-xl">
+                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                    Boys' Health Guide
+                  </span>
+                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                </CardTitle>
+                <CardDescription>
+                  Essential information about nightfall, masturbation, hygiene, and sexual wellness
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
+        </div>
 
         <Tabs defaultValue="topics" className="space-y-6">
           <TabsList className="grid w-full grid-cols-2 max-w-md">
