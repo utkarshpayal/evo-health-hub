@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# CycleWell (evo-health-hub)
 
-## Project info
+CycleWell is a front-end prototype of an inclusive period-tracking and sexual-health education app. It combines a cycle tracker, health guides for girls and boys, a searchable Q&A section, a learning hub and a support chat UI.
 
-**URL**: https://lovable.dev/projects/c53d39a7-58bd-4fd7-9746-66217a19b78b
+> **Status:** UI prototype. All content and data (cycle days, stats, chat replies) are hard-coded in the components. There is no backend, persistence, authentication or real chat/AI integration yet.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+| Route | Page | What it shows |
+| --- | --- | --- |
+| `/` | Dashboard | Overview cards (current cycle, health score, tracking progress, quick tips) and links to the boys'/girls' health guides |
+| `/tracker` | Period Tracker | 28-day cycle calendar highlighting period and ovulation days, flow level and symptom selectors, cycle stats |
+| `/qna` | Questions & Answers | Searchable FAQ grouped by topic (period basics, boys' health, cycle health, sexual health, symptoms & relief) |
+| `/chat` | Support Chat | Chat interface; replies are a simulated demo response |
+| `/learn` | Health Education | Topic cards (body, safe practices, emotional wellness, relationships) and a "Myths vs Facts" section |
+| `/girls-health` | Girls' Health | Guides on menstrual hygiene, sexual health and intimate hygiene |
+| `/boys-health` | Boys' Health | Guides on nightfall, masturbation and sexual health, safety and hygiene |
 
-**Use Lovable**
+A responsive navigation bar (`src/components/Navigation.tsx`) links Home, Tracker, Q&A, Chat and Learn.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c53d39a7-58bd-4fd7-9746-66217a19b78b) and start prompting.
+## Tech stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- [Vite](https://vitejs.dev/) + React 18 + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) and [shadcn/ui](https://ui.shadcn.com/) (Radix UI primitives) in `src/components/ui`
+- React Router for routing, TanStack Query provider, lucide-react icons
 
-**Use your preferred IDE**
+## Getting started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requirements: Node.js and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The dev server is configured in `vite.config.ts` to listen on port **8080**.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Scripts
 
-**Use GitHub Codespaces**
+| Script | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Production build into `dist/` |
+| `npm run build:dev` | Build using development mode |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+No test script is configured.
 
-## What technologies are used for this project?
+## Configuration
 
-This project is built with:
+No environment variables are used.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project structure
 
-## How can I deploy this project?
+```
+src/
+  App.tsx            # Routes
+  pages/             # Dashboard, Tracker, QnA, Chat, Learn, BoysHealth, GirlsHealth, NotFound
+  components/        # Navigation + shadcn/ui components
+  assets/            # Images used on the dashboard and guide pages
+  hooks/, lib/       # Toast/mobile hooks and utility helpers
+```
 
-Simply open [Lovable](https://lovable.dev/projects/c53d39a7-58bd-4fd7-9746-66217a19b78b) and click on Share -> Publish.
+## Disclaimer
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The health content in this app is general educational information and is not a substitute for professional medical advice.
